@@ -1,0 +1,1228 @@
+/* دليل مدارس المملكة - ملف CSS محسّن
+    متوافق مع جميع الأجهزة (Responsive) 
+    هوية جامعة المملكة - كلية الهندسة وعلوم الحاسب */
+
+:root {
+    --primary: #003366;
+    --primary-light: #004d99;
+    --accent: #00f2fe;
+    --accent-light: #33fbff;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+    --bg: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --white: #ffffff;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+}
+
+/* Dark theme overrides: add `dark` class to <body> to enable */
+body.dark, html[data-theme='dark'] {
+    --bg: #020617;
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --white: rgba(255, 255, 255, 0.05);
+    --text-dark: #f8fafc;
+    --text-light: #cbd5e1;
+    --border: rgba(255, 255, 255, 0.15);
+    --primary: #60a5fa;
+    --primary-light: #93c5fd;
+    --accent: #00f2fe;
+}
+
+/* login-like atmosphere across dark mode pages */
+html[data-theme='dark'] body,
+body.dark {
+    background-color: var(--bg);
+    background-image: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 80%);
+}
+
+/* make toggle button visually consistent */
+#theme-toggle {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+body.dark #theme-toggle, html[data-theme='dark'] #theme-toggle {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--white);
+}
+
+/* Ensure toggle is fixed at the viewport left edge and clearly visible */
+#theme-toggle {
+    position: fixed !important;
+    left: 12px !important;
+    top: 12px !important;
+    z-index: 4000 !important;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+/* Upload icons style: show icons instead of textual notes */
+.school-upload-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+}
+.school-upload-icons .upload-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(99,102,241,0.04);
+    border: 1px solid rgba(99,102,241,0.08);
+    border-radius: 10px;
+    color: var(--text-light);
+}
+.school-upload-icons .upload-icon svg { display: block; }
+
+/* Accessible hidden text for screen readers */
+.sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
+
+/* Override inline white backgrounds on dark mode to ensure consistent theming */
+body.dark [style*="background: white"], html[data-theme='dark'] [style*="background: white"] {
+    background: var(--white) !important;
+    color: var(--text-dark) !important;
+}
+body.dark [style*="background:white"], html[data-theme='dark'] [style*="background:white"],
+body.dark [style*="background:#fff"], html[data-theme='dark'] [style*="background:#fff"],
+body.dark [style*="background: #fff"], html[data-theme='dark'] [style*="background: #fff"] {
+    background: var(--white) !important;
+    color: var(--text-dark) !important;
+    border-color: var(--border) !important;
+}
+html[data-theme='dark'] [style*="background:#ffffff"],
+html[data-theme='dark'] [style*="background: #ffffff"] {
+    background: var(--white) !important;
+    color: var(--text-dark) !important;
+}
+/* General fallback: force common container backgrounds */
+html[data-theme='dark'] header,
+html[data-theme='dark'] .search-container,
+html[data-theme='dark'] .school-card,
+html[data-theme='dark'] .review-item,
+html[data-theme='dark'] .back-button,
+html[data-theme='dark'] .btn-auth,
+body.dark header,
+body.dark .search-container,
+body.dark .school-card,
+body.dark .review-item,
+body.dark .back-button,
+body.dark .btn-auth {
+    background: var(--bg-secondary) !important;
+    color: var(--text-dark) !important;
+    border-color: var(--border) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Admin-specific elements that set white backgrounds in-page */
+html[data-theme='dark'] .stat-box,
+html[data-theme='dark'] .stat-card,
+html[data-theme='dark'] .stats-container,
+html[data-theme='dark'] .audit-container,
+html[data-theme='dark'] .backup-container,
+html[data-theme='dark'] .chart-section,
+html[data-theme='dark'] .filters,
+html[data-theme='dark'] .modal-content,
+html[data-theme='dark'] .report-info,
+html[data-theme='dark'] .map-sidebar,
+html[data-theme='dark'] .legend,
+html[data-theme='dark'] .stats-info,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .form-group,
+html[data-theme='dark'] .alert,
+html[data-theme='dark'] table,
+html[data-theme='dark'] th,
+html[data-theme='dark'] td,
+html[data-theme='dark'] .table,
+html[data-theme='dark'] .btn,
+html[data-theme='dark'] .btn-primary,
+html[data-theme='dark'] .btn-secondary,
+body.dark .stat-box,
+body.dark .stat-card,
+body.dark .stats-container,
+body.dark .audit-container,
+body.dark .backup-container,
+body.dark .chart-section,
+body.dark .filters,
+body.dark .modal-content,
+body.dark .report-info,
+body.dark .map-sidebar,
+body.dark .legend,
+body.dark .stats-info,
+body.dark .card,
+body.dark .form-group,
+body.dark .alert,
+body.dark table,
+body.dark th,
+body.dark td,
+body.dark .table,
+body.dark .btn,
+body.dark .btn-primary,
+body.dark .btn-secondary {
+    background: var(--white) !important;
+    color: var(--text-dark) !important;
+    border-color: var(--border) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Strong contrast for KPI numbers in dark mode */
+html[data-theme='dark'] .stat-box h2,
+html[data-theme='dark'] .stat-box h3,
+html[data-theme='dark'] .stat-card h2,
+html[data-theme='dark'] .stat-card h3,
+html[data-theme='dark'] .stat-card .value,
+html[data-theme='dark'] .stat-value,
+body.dark .stat-box h2,
+body.dark .stat-box h3,
+body.dark .stat-card h2,
+body.dark .stat-card h3,
+body.dark .stat-card .value,
+body.dark .stat-value {
+    color: #f8fafc !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 8px rgba(15, 23, 42, 0.45);
+}
+
+html[data-theme='dark'] .stats-grid .stat-box span,
+html[data-theme='dark'] .stats-cards .stat-card span,
+body.dark .stats-grid .stat-box span,
+body.dark .stats-cards .stat-card span {
+    color: #f8fafc !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 8px rgba(15, 23, 42, 0.45);
+}
+
+html[data-theme='dark'] .stat-box p,
+html[data-theme='dark'] .stat-card p,
+html[data-theme='dark'] .stat-card .subtext,
+body.dark .stat-box p,
+body.dark .stat-card p,
+body.dark .stat-card .subtext {
+    color: #cbd5e1 !important;
+}
+
+/* Inputs and selects in dark mode */
+html[data-theme='dark'] input,
+html[data-theme='dark'] select,
+html[data-theme='dark'] textarea,
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: var(--bg-secondary) !important;
+    color: var(--text-dark) !important;
+    border-color: var(--border) !important;
+}
+
+/* Ensure high contrast for inputs in both themes */
+:root {
+    --fg: var(--text-dark);
+    --input-placeholder: rgba(15, 23, 42, 0.45);
+}
+
+body.dark, html[data-theme='dark'] {
+    --fg: #ffffff;
+    --input-placeholder: rgba(255, 255, 255, 0.65);
+}
+
+input, textarea, select {
+    color: var(--fg) !important;
+    caret-color: var(--fg) !important;
+    border-color: var(--border) !important;
+    background-color: transparent !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--input-placeholder) !important;
+    opacity: 1 !important;
+}
+
+/* Extra specificity for auth forms and common wrappers */
+.auth-form input, .auth-form textarea, .login-panel input, .login-panel textarea {
+    color: var(--fg) !important;
+    caret-color: var(--fg) !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================
+   شريط التنقل العلوي الموحد
+   ================================ */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 12px 0;
+    border-bottom: 4px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.navbar-brand:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.navbar-link.active {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.back-button:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateX(3px);
+}
+
+.auth-bar {
+    background: var(--primary);
+    padding: 12px 0;
+    border-bottom: 4px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right,
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-auth {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn-auth:hover {
+    background: var(--accent);
+    color: var(--primary);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* رأس الصفحة */
+header {
+    background: var(--white);
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.logo-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: 700;
+}
+
+.sub-title {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* صندوق البحث الهرمي */
+.search-container {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+    margin-bottom: 60px;
+    border: 1px solid #edf2f7;
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    align-items: flex-end;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent);
+    background: #fdfdfd;
+    box-shadow: 0 0 0 4px rgba(0, 242, 254, 0.1);
+    outline: none;
+}
+
+input::placeholder {
+    color: #cbd5e1;
+}
+
+input:disabled,
+select:disabled {
+    background: var(--bg-secondary);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ================================
+   الأزرار - متعددة الأنماط
+   ================================ */
+
+button,
+.btn,
+.button,
+input[type="submit"],
+input[type="button"] {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    outline: none;
+}
+
+button:hover,
+.btn:hover,
+.button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active,
+.btn:active,
+.button:active {
+    transform: translateY(0);
+}
+
+/* أنماط مختلفة للأزرار */
+.btn-primary,
+.btn-default,
+button[type="submit"] {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--primary-light);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.btn-success:hover {
+    background: #059669;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.2);
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.3);
+}
+
+.btn-warning {
+    background: var(--warning);
+    color: white;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.2);
+}
+
+.btn-warning:hover {
+    background: #d97706;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+.btn-info {
+    background: var(--info);
+    color: white;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+}
+
+.btn-info:hover {
+    background: #2563eb;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary,
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* شريط المراحل التعليمية */
+.levels-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.level-pill {
+    text-decoration: none;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    color: #475569;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.level-pill:hover,
+.active-pill {
+    background: var(--primary);
+    color: white;
+    border-color: var(--accent);
+}
+
+.level-pill span {
+    background: var(--accent);
+    color: var(--primary);
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+/* بطاقات المدارس */
+.school-card {
+    background: var(--white);
+    border-radius: 25px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: 0.3s ease;
+}
+
+.school-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.card-header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left, #ffffff, #fafafa);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-header > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-map {
+    background: #10b981;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-map:hover {
+    background: #059669;
+    transform: scale(1.05);
+}
+
+/* قسم التعليقات */
+.reviews-section {
+    background: #f8fafc;
+    padding: 30px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.review-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.add-review-form {
+    display: grid;
+    grid-template-columns: 180px 1fr auto;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* ================================
+   استجابة الشاشات المختلفة
+   Media Queries
+   ================================ */
+
+/* الشاشات الكبيرة (Desktop) */
+@media (min-width: 1200px) {
+    .search-grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .card-header {
+        flex-direction: row;
+    }
+}
+
+/* الشاشات المتوسطة (Tablet) */
+@media (max-width: 1024px) {
+    .search-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-header > div {
+        min-width: 250px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .levels-bar {
+        gap: 10px;
+    }
+
+    .add-review-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        padding: 40px 0;
+    }
+
+    .logo-title {
+        font-size: 2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 12px;
+    }
+}
+
+/* الشاشات الصغيرة (Mobile) */
+@media (max-width: 768px) {
+    .search-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    input,
+    select,
+    .btn-search {
+        grid-column: span 1 !important;
+        padding: 12px 10px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .card-header > div {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .navbar-link {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-title {
+        font-size: 0.95rem;
+    }
+
+    header {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+
+    .logo-title {
+        font-size: 1.6rem;
+    }
+
+    .search-container {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .level-pill {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .add-review-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-map,
+    button,
+    .btn,
+    a[class*="btn"] {
+        width: 100%;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    /* إخفاء الأعمدة غير الضرورية على الأجهزة الصغيرة */
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* الشاشات الصغيرة جداً (Mobile XS) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 16px; /* منع التكبير على iOS */
+    }
+
+    header {
+        padding: 20px 0;
+        margin-bottom: 15px;
+    }
+
+    .logo-title {
+        font-size: 1.3rem;
+    }
+
+    .sub-title {
+        font-size: 0.95rem;
+    }
+
+    .search-container {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .btn-auth {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        flex: 1;
+        min-width: 80px;
+    }
+
+    .level-pill {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    button,
+    .btn,
+    a[class*="btn"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-link {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .back-button {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+
+    .logo-title {
+        font-size: 1.4rem;
+    }
+
+    .search-container {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .btn-auth {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .level-pill {
+        padding: 8px 15px;
+    }
+}
+
+/* الإحصائيات (في حالة إعادة الإضافة) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-box {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    border-bottom: 5px solid transparent;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--accent);
+}
+
+.stat-box h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--primary);
+}
+
+.stat-box p {
+    margin: 10px 0 0;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 70px 20px;
+    opacity: 0.7;
+    font-size: 0.95rem;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 60px;
+}
+
+/* رسائل الخطأ والنجاح */
+.alert {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.alert-warning {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+}
+
+/* الرسائل */
+.message {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.message.success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* الجداول - مع دعم التمرير الأفقي على الشاشات الصغيرة */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    min-width: 600px;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: var(--bg-secondary);
+    box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.05);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* أنيميشن */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.school-card {
+    animation: slideIn 0.3s ease;
+}
+
+/* اختفاء وإظهار سلس */
+.fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

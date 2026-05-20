@@ -1,0 +1,13 @@
+[2026-05-07 17:32:49] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-07 17:33:02] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-07 17:33:11] [WARNING] User: yahya | IP: ::1 | Temporary emergency admin login used | Data: {"username":"yahya"}
+[2026-05-07 17:35:55] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى PDF | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"exported_by":1}
+[2026-05-07 17:35:55] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى PDF | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"exported_by":1}
+[2026-05-07 21:11:09] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-07 21:11:19] [WARNING] User: yahya | IP: ::1 | Temporary emergency admin login used | Data: {"username":"yahya"}
+[2026-05-07 21:14:39] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى PDF | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"exported_by":1}
+[2026-05-07 21:14:39] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى PDF | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"exported_by":1}
+[2026-05-07 21:14:54] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى CSV | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"format":"csv","exported_by":1}
+[2026-05-07 21:14:56] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى XLSX | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"format":"xlsx","exported_by":1}
+[2026-05-07 21:14:56] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى CSV | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"format":"csv","exported_by":1}
+[2026-05-07 21:45:35] [WARNING] User: yahya | IP: ::1 | Temporary emergency admin login used | Data: {"username":"yahya"}

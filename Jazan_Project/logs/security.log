@@ -1,0 +1,69 @@
+[2026-05-09 16:01:04] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-09 16:01:15] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-09 16:01:23] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-09 16:01:38] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:23:41] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:23:50] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:26:01] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:27:57] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:28:08] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:28:16] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:30:41] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:31:04] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:32:29] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-10 08:36:43] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-11 08:26:38] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - user not found | Data: {"username":"yhaya"}
+[2026-05-11 08:26:46] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-11 08:26:55] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-13 19:30:25] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-13 19:31:42] [WARNING] User: ANONYMOUS | IP: ::1 | Signup attempt with existing username | Data: {"username":"yahya"}
+[2026-05-13 19:31:53] [WARNING] User: ANONYMOUS | IP: ::1 | CSRF token validation failed during signup | Data: []
+[2026-05-13 19:32:09] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 12:42:12] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-16 12:42:20] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 13:20:53] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 13:36:51] [INFO] User: YJYQD | IP: ::1 | User logged in successfully | Data: {"user_id":7,"username":"YJYQD"}
+[2026-05-16 13:37:09] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-16 13:37:18] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-16 13:37:26] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 13:38:15] [INFO] User: yahya1 | IP: ::1 | User logged in successfully | Data: {"user_id":8,"username":"yahya1"}
+[2026-05-16 14:23:40] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-16 14:23:53] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 20:10:10] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-16 20:10:20] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 20:20:27] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 20:21:00] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 20:24:15] [UPDATE] User: yahya | IP: ::1 | تم رفع صورة للمدرسة | Data: {"school_id":11,"image_type":"building","uploaded_by":1}
+[2026-05-16 20:24:42] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-16 20:35:29] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-17 08:17:41] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-17 15:17:06] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-17 15:22:50] [UPDATE] User: yahya | IP: ::1 | تم رفع صورة للمدرسة | Data: {"school_id":11,"image_type":"building","uploaded_by":1}
+[2026-05-17 15:25:26] [UPDATE] User: yahya | IP: ::1 | تم رفع صورة للمدرسة | Data: {"school_id":11,"image_type":"building","uploaded_count":1,"uploaded_by":1}
+[2026-05-17 15:30:37] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya1"}
+[2026-05-17 15:30:54] [INFO] User: YJYQD | IP: ::1 | User logged in successfully | Data: {"user_id":7,"username":"YJYQD"}
+[2026-05-17 15:32:40] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-17 16:57:02] [WARNING] User: ANONYMOUS | IP: ::1 | Signup attempt with existing username | Data: {"username":"yahya"}
+[2026-05-17 17:00:33] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-17 17:03:56] [INFO] User: ANONYMOUS | IP: ::1 | New user registered (pending verification) | Data: {"username":"php","email":"wwf600600@mail.com"}
+[2026-05-18 20:24:33] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-18 20:24:41] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-18 20:37:51] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى PDF | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"exported_by":1}
+[2026-05-18 20:37:51] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى PDF | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"exported_by":1}
+[2026-05-18 20:38:02] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى CSV | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"format":"csv","exported_by":1}
+[2026-05-19 14:47:12] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-19 16:26:17] [EXPORT] User: yahya | IP: ::1 | تم تصدير بيانات المدارس إلى CSV | Data: {"gov_id":0,"education_level":"ALL","school_type":"ALL","schools_count":13,"format":"csv","exported_by":1}
+[2026-05-19 16:59:59] [INFO] User: YJYQD | IP: ::1 | User logged in successfully | Data: {"user_id":7,"username":"YJYQD"}
+[2026-05-19 17:00:30] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-19 18:07:36] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-19 18:19:10] [INFO] User: YJYQD | IP: ::1 | User logged in successfully | Data: {"user_id":7,"username":"YJYQD"}
+[2026-05-19 19:54:27] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 12:03:31] [WARNING] User: ANONYMOUS | IP: ::1 | Failed login attempt - wrong password | Data: {"username":"yahya"}
+[2026-05-20 12:03:39] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 14:54:12] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 16:20:01] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 16:27:01] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 16:27:34] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 19:35:01] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 20:59:52] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
+[2026-05-20 21:01:35] [INFO] User: yahya | IP: ::1 | User logged in successfully | Data: {"user_id":1,"username":"yahya"}
